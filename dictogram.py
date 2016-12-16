@@ -25,7 +25,10 @@ class Dictogram(dict):
 
     def count(self, item):
         """Return the count of the given item in this histogram, or 0"""
-        # TODO: retrieve item count
+        if item in self:
+            return self[item]
+        else:
+            return 0
 
 def test_histogram(text_list):
     print('text list:', text_list)
