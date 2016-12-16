@@ -15,7 +15,13 @@ class Dictogram(dict):
     def update(self, iterable):
         """Update this histogram with the items in the given iterable"""
         for item in iterable:
-            # TODO: increment item count
+            if item in self:
+                self.tokens += 1
+                self[item] += 1
+            else:
+                self.types += 1
+                self.tokens += 1
+                self[item] = 1
 
     def count(self, item):
         """Return the count of the given item in this histogram, or 0"""
