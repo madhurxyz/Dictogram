@@ -2,7 +2,7 @@
 
 
 from __future__ import division, print_function
-from histograms import Dictogram#, Listogram
+from dictogram import Dictogram
 import unittest
 
 
