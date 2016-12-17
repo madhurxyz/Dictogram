@@ -25,7 +25,10 @@ class Dictogram(dict):
                 self.types += 1
                 self.tokens += 1
                 self[item] = 1
-                
+
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def count(self, item):
         """Return the count of the given item in this histogram, or 0"""
         if item in self:
