@@ -12,6 +12,9 @@ class Dictogram(dict):
         if iterable:
             self.update(iterable)
 
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def update(self, iterable):
         """Update this histogram with the items in the given iterable"""
         for item in iterable:
@@ -22,7 +25,7 @@ class Dictogram(dict):
                 self.types += 1
                 self.tokens += 1
                 self[item] = 1
-
+                
     def count(self, item):
         """Return the count of the given item in this histogram, or 0"""
         if item in self:
